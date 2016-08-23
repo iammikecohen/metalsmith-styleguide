@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{title}}</title>
+</head>
+<body>
+    <nav>
+        {{#each collections}}
+            {{#each this}}
+                <a href="/{{category}}/{{name}}">{{name}}</a>
+            {{/each}} 
+        {{/each}} 
+    </nav>
+    {{{contents}}}
+</body>
+</html>
