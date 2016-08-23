@@ -18,10 +18,10 @@ function clearSCSS(){
                 files[file].collection = files[file].category;
             }
         }
+        console.log(file);
     }
     done();
   };
-  
 }
 
 var renderer = new marked.Renderer();
@@ -58,10 +58,6 @@ var extensions = {
 
 Metalsmith(__dirname)
   .source('./markdown')
-  .use(define({
-    styles: ['styles/prism.css'],
-    
-  }))
   .destination('./build')
   .use(clearSCSS())
   .use(collections())
